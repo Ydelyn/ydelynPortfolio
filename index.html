@@ -14,14 +14,49 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#apropos">A propos</a></li>
-        <li><a href="#mes-services">Mes services</a></li>
-        <li><a href="#contact">Contactez-moi</a></li>
-      </ul>
+    <!-- navigation principale -->
+    <!-- fixed-top pour fixer la nav en haut de page -->
+    <!-- navbar-expand-lg pour la faire apparaitre sur un écran large -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <!-- collapse effondrement permet de masquer et d'afficher le bouton -->
+        <!-- aria-controls accessibilité aria-expanded="false" on démarre avec le menu qui n'est pas étendu on démarre à false -->
+
+        <button
+          class="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#ma-nav"
+          aria-controls="ma-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- navbar-toggler-icon un svg qui fait le bouton toggler = bascule -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- collapse navbar-collapse pour la faire apparaître ou non //  attention c'est le même id que dans data-target -->
+
+        <div class="collapse navbar-collapse" id="ma-nav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#accueil">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#apropos">A propos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#mes-services">Mes services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contactez-moi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <header id="accueil" class="bg-dark text-white">
       <img src="./img/man.svg" alt="Photo de Lorris 'Ydelyn' Colini" />
